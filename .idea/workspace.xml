@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="48def277-5d69-45d3-87b4-5b4f5bc33a82" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Cluster.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HW_08_Part 2 Sumire.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HW_08 Part 1.py" beforeDir="false" afterPath="$PROJECT_DIR$/HW_08 Part 1.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HW_08 Part 3 Jupyter.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/HW_08 Part 3 Jupyter.ipynb" afterDir="false" />
-    </list>
+    <list default="true" id="48def277-5d69-45d3-87b4-5b4f5bc33a82" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -112,7 +106,7 @@
       <option name="presentableId" value="Default" />
       <updated>1603394941779</updated>
       <workItem from="1603394951770" duration="5949000" />
-      <workItem from="1603564260144" duration="36668000" />
+      <workItem from="1603564260144" duration="36915000" />
     </task>
     <task id="LOCAL-00001" summary="Changed the codes to take the absolute values and commented the codes as well">
       <created>1603583677294</created>
@@ -128,7 +122,14 @@
       <option name="project" value="LOCAL" />
       <updated>1603598140598</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Implemented Part 2">
+      <created>1603656840155</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1603656840155</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -151,7 +152,8 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Changed the codes to take the absolute values and commented the codes as well" />
     <MESSAGE value="Wrote codes to implement Part 3 with library" />
-    <option name="LAST_COMMIT_MESSAGE" value="Wrote codes to implement Part 3 with library" />
+    <MESSAGE value="Implemented Part 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implemented Part 2" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
