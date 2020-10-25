@@ -20,10 +20,10 @@ def generateDistanceMatrix(data,rows,coloumns):
         for guest_index_y in range(0, len(rows)):
             row1=data.loc[guest_index_x]
             row2=data.loc[guest_index_y]
-            d=getEuclideanDistance(np.asarray(row1),np.asarray(row2))
+            d=getEuclideanDistance(row1,row2)
             DISTANCE_MATRIX_GUEST[guest_index_x][guest_index_y]=d
             DISTANCE_MATRIX_GUEST[guest_index_y][guest_index_x] = d
-    print(DISTANCE_MATRIX_GUEST)
+    return DISTANCE_MATRIX_GUEST
 
 
 
