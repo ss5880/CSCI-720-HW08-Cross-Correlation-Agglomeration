@@ -2,9 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="48def277-5d69-45d3-87b4-5b4f5bc33a82" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/HW_08 Part 3 Jupyter.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HW_08 Part 3.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Cluster.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HW_08_Part 2 Sumire.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HW_08 Part 1.py" beforeDir="false" afterPath="$PROJECT_DIR$/HW_08 Part 1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HW_08 Part 3 Jupyter.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/HW_08 Part 3 Jupyter.ipynb" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -15,8 +17,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Python Script" />
         <option value="Jupyter Notebook" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -47,7 +49,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Python.HW_08 Part 1">
     <configuration name="HW_08 Part 1" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="HW_08_Shanbhag_Sakai_dir" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -70,9 +72,32 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="HW_08_Part 2" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="HW_08_Shanbhag_Sakai_dir" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="C:\Users\ss042\Classes\Fall 2020\CSCI 720 Big Data Analytics\HW\HW_08_Shanbhag_Sakai_dir\HW_08_Part 2 Sumire.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Python.HW_08 Part 1" />
+        <item itemvalue="Python.HW_08_Part 2" />
       </list>
     </recent_temporary>
   </component>
@@ -87,7 +112,7 @@
       <option name="presentableId" value="Default" />
       <updated>1603394941779</updated>
       <workItem from="1603394951770" duration="5949000" />
-      <workItem from="1603564260144" duration="16483000" />
+      <workItem from="1603564260144" duration="36668000" />
     </task>
     <task id="LOCAL-00001" summary="Changed the codes to take the absolute values and commented the codes as well">
       <created>1603583677294</created>
@@ -96,7 +121,14 @@
       <option name="project" value="LOCAL" />
       <updated>1603583677294</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Wrote codes to implement Part 3 with library">
+      <created>1603598140598</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1603598140598</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -118,9 +150,22 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Changed the codes to take the absolute values and commented the codes as well" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changed the codes to take the absolute values and commented the codes as well" />
+    <MESSAGE value="Wrote codes to implement Part 3 with library" />
+    <option name="LAST_COMMIT_MESSAGE" value="Wrote codes to implement Part 3 with library" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/HW_08_Part 2 Sumire.py</url>
+          <line>27</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/HW_08_Shanbhag_Sakai_dir$HW_08_Part_1.coverage" NAME="HW_08 Part 1 Coverage Results" MODIFIED="1603582696406" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/HW_08_Shanbhag_Sakai_dir$HW_08_Part_2.coverage" NAME="HW_08_Part 2 Coverage Results" MODIFIED="1603656007747" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/HW_08_Shanbhag_Sakai_dir$HW_08_Part_1.coverage" NAME="HW_08 Part 1 Coverage Results" MODIFIED="1603656470450" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
