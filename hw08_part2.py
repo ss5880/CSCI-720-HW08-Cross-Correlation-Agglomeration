@@ -87,6 +87,7 @@ def mergeGuests(DISTANCE_MATRIX,guest1,guest2,dataDict):
     dataDict[mergedStr]=avg_points#adding new point in dictionary
     DISTANCE_MATRIX[mergedStr]={}
     for keys in dataDict.keys():
+
         #calculating the distance of the new avg point and all the other points by iterating the keys of Dictionary
         if keys!=mergedStr:
             row1 = dataDict[keys]
@@ -116,23 +117,21 @@ def findAVG(guest1,guest2):
 
 '''startClustering() is the beginning of the Clustering process'''
 def startClustering(DISTANCE_MATRIX,dataDict):
+    finalClusters = []
     while len(dataDict.keys())>1:
+        if(len(dataDict.keys())<=20):
+            if(len(guest1.split(",")) < len(guest2.split(","))):
+                finalClusters.append([int(guest) + 1 for guest in guest1[0].split(",")])
+            else:
+                finalClusters.append([int(guest) + 1 for guest in guest2[0].split(",")])
         guest1,guest2=findClosestPoints(DISTANCE_MATRIX)
         DISTANCE_MATRIX,dataDict=mergeGuests(DISTANCE_MATRIX,guest1,guest2,dataDict)
+        if len(dataDict.keys())==6:
+            print(dataDict)
+    for cluster in range(len(finalClusters)):
+        print("Cluster length" + str(20 - cluster) + ": " + str(len(finalClusters[cluster])))
 
-'''
-def generatePlot():
-    global Dendrogram_list
-    # Initialize limit
-    N = 16
-    # Using items() + list slicing
-    # Get first K items in dictionary
-    out = dict(list(reversed(list(Dendrogram_list.items())))[0: N])
-    # printing result
-    print("Dictionary limited by K is : " + str(out))
-    G = nx.Graph(out)
-    nx.draw(G)
-    plt.show()'''
+
 
 
 def Main():
@@ -143,8 +142,5 @@ def Main():
     GUEST_DISTANCE_MATRIX = generateDistanceMatrix(dataDict_copy)
     startClustering(GUEST_DISTANCE_MATRIX,dataDict_copy)
     #print(Dendrogram_list)
-    #generatePlot()
 
-if __name__ == '__main__':
-    Main()
-    print(Dendrogram_list)
+Main()
