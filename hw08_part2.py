@@ -3,12 +3,14 @@
 @Purpose: To perform the Agglomeration of the data
 """
 
-import pandas as pd
 import numpy as np
+import pandas as pd
 
 global globalDataDict
 Dendrogram_list={}
 
+
+'''the  read_Data_file() reads datapoints from the csv file'''
 def read_Data_file():
     data = pd.read_csv('HW_PCA_SHOPPING_CART_v896.csv')
     data = data.drop(['ID'], axis=1)
@@ -16,12 +18,13 @@ def read_Data_file():
     rows = list(data.iloc[:, 0])
     return data, rows, columns
 
+'''getEuclideanDistance() calculates the Euclidean Distance between the points and returens the distance'''
 
 def getEuclideanDistance(x, y):
     distance = np.sqrt(np.sum([(a - b) * (a - b) for a, b in zip(x, y)]))
     return distance
 
-
+'''formatTheData() generates the global dictionary dataDict for acessing the points and after each iteration'''
 def formatTheData(data, rows, coloumns):
     dataDict = {}
     #print(data.loc[0].values)
@@ -29,8 +32,8 @@ def formatTheData(data, rows, coloumns):
         dataDict[str(guest_index_x)] = data.loc[guest_index_x].values.tolist()
     return dataDict
 
-
-def generateDistanceMatrix(data, rows):
+'''generateDistanceMatrix() creates the Distance matrix for the points'''
+def generateDistanceMatrix(data):
     dataKeys = data.keys()
     dataKeys = sorted(dataKeys)
     DISTANCE_MATRIX = {}
@@ -45,7 +48,7 @@ def generateDistanceMatrix(data, rows):
             else:
                 DISTANCE_MATRIX[str(guest_index_x)][str(guest_index_y)] = float("inf")
     return DISTANCE_MATRIX
-
+'''findClosestPoints finds the clusters with minimum distance'''
 def findClosestPoints(DISTANCE_MATRIX):
     minDistance = float('inf')
     keys = DISTANCE_MATRIX.keys()
@@ -63,21 +66,28 @@ def findClosestPoints(DISTANCE_MATRIX):
             #print(key_value_row, key_value_col, DISTANCE_MATRIX[key_value_row][key_value_col])
     return guest1,guest2
 
+
+
+'''mergeGuests() combines the clusters with minimum distance and combines in the Distance Matrix'''
 def mergeGuests(DISTANCE_MATRIX,guest1,guest2,dataDict):
     global Dendrogram_list
-    Dendrogram_list[guest1]=guest2
+    Dendrogram_list[guest1]=guest2#Dictionary to record the clusters formed step by step
+    # Delete the cluster1 and cluster2 from the DISTANCE_MATRIX and dataDict
     del (DISTANCE_MATRIX[guest1])
     del (DISTANCE_MATRIX[guest2])
     del(dataDict[guest1])
     del(dataDict[guest2])
+    # Delete the distance of cluster1 and cluster2 from the DISTANCE_MATRIX and dataDict for each value in the dictionary
     for key in DISTANCE_MATRIX.keys():
         del (DISTANCE_MATRIX[key][guest1])
         del (DISTANCE_MATRIX[key][guest2])
+    #find the average point value of the cluster
     avg_points=findAVG(guest1,guest2)
-    mergedStr=str(guest1)+","+str(guest2)
-    dataDict[mergedStr]=avg_points
+    mergedStr=str(guest1)+","+str(guest2)#string to add new record into DISTANCE_MATRIX
+    dataDict[mergedStr]=avg_points#adding new point in dictionary
     DISTANCE_MATRIX[mergedStr]={}
     for keys in dataDict.keys():
+        #calculating the distance of the new avg point and all the other points by iterating the keys of Dictionary
         if keys!=mergedStr:
             row1 = dataDict[keys]
             row2 = avg_points
@@ -91,7 +101,8 @@ def mergeGuests(DISTANCE_MATRIX,guest1,guest2,dataDict):
 
 
 
-
+'''findAVG() computes the average of the points in cluster guest1 and guest2 to form a new record
+in the DISTANCE_MATRIX and the dataDict '''
 def findAVG(guest1,guest2):
     global globalDataDict
     guests=guest1.split(",")+guest2.split(",")
@@ -103,22 +114,34 @@ def findAVG(guest1,guest2):
 
 
 
-
+'''startClustering() is the beginning of the Clustering process'''
 def startClustering(DISTANCE_MATRIX,dataDict):
     while len(dataDict.keys())>1:
         guest1,guest2=findClosestPoints(DISTANCE_MATRIX)
         DISTANCE_MATRIX,dataDict=mergeGuests(DISTANCE_MATRIX,guest1,guest2,dataDict)
 
-
+'''
 def generatePlot():
     global Dendrogram_list
+    # Initialize limit
+    N = 16
+    # Using items() + list slicing
+    # Get first K items in dictionary
+    out = dict(list(reversed(list(Dendrogram_list.items())))[0: N])
+    # printing result
+    print("Dictionary limited by K is : " + str(out))
+    G = nx.Graph(out)
+    nx.draw(G)
+    plt.show()'''
+
 
 def Main():
     global globalDataDict,Dendrogram_list
     data, rows, cols = read_Data_file()
     globalDataDict = formatTheData(data, rows, cols)
     dataDict_copy=globalDataDict.copy()
-    GUEST_DISTANCE_MATRIX = generateDistanceMatrix(dataDict_copy, rows)
+    GUEST_DISTANCE_MATRIX = generateDistanceMatrix(dataDict_copy)
     startClustering(GUEST_DISTANCE_MATRIX,dataDict_copy)
-    print(Dendrogram_list)
+    #print(Dendrogram_list)
+    #generatePlot()
 Main()
