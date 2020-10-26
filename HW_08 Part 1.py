@@ -127,10 +127,6 @@ def analyzeAttribute(crossCorrelation_df, attributeName):
 
         # Get the correlation value
         crossCorrelation_value = crossCorrelation_df.at[attribute_y, attributeName]
-        # print(attributeName)
-        # print(attribute_y)
-        # print(crossCorrelation_value)
-
 
         # Ignore if column name is same with row name
         if attribute_y != attributeName:
