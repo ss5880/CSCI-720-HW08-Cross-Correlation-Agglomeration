@@ -7,6 +7,7 @@ import pandas as pd
 import numpy as np
 
 global globalDataDict
+Dendrogram_list={}
 
 def read_Data_file():
     data = pd.read_csv('HW_PCA_SHOPPING_CART_v896.csv')
@@ -63,7 +64,8 @@ def findClosestPoints(DISTANCE_MATRIX):
     return guest1,guest2
 
 def mergeGuests(DISTANCE_MATRIX,guest1,guest2,dataDict):
-
+    global Dendrogram_list
+    Dendrogram_list[guest1]=guest2
     del (DISTANCE_MATRIX[guest1])
     del (DISTANCE_MATRIX[guest2])
     del(dataDict[guest1])
@@ -106,15 +108,17 @@ def startClustering(DISTANCE_MATRIX,dataDict):
     while len(dataDict.keys())>1:
         guest1,guest2=findClosestPoints(DISTANCE_MATRIX)
         DISTANCE_MATRIX,dataDict=mergeGuests(DISTANCE_MATRIX,guest1,guest2,dataDict)
-    print(dataDict)
 
+
+def generatePlot():
+    global Dendrogram_list
 
 def Main():
-    global globalDataDict
+    global globalDataDict,Dendrogram_list
     data, rows, cols = read_Data_file()
     globalDataDict = formatTheData(data, rows, cols)
     dataDict_copy=globalDataDict.copy()
     GUEST_DISTANCE_MATRIX = generateDistanceMatrix(dataDict_copy, rows)
     startClustering(GUEST_DISTANCE_MATRIX,dataDict_copy)
-
+    print(Dendrogram_list)
 Main()
