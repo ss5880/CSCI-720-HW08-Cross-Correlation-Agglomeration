@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="48def277-5d69-45d3-87b4-5b4f5bc33a82" name="Default Changelist" comment="" />
+    <list default="true" id="48def277-5d69-45d3-87b4-5b4f5bc33a82" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HW_08_Part 2 Sumire.py" beforeDir="false" afterPath="$PROJECT_DIR$/HW_08_Part 2 Sumire.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hw08_part2.py" beforeDir="false" afterPath="$PROJECT_DIR$/hw08_part2.py" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,7 +47,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.HW_08 Part 1">
+  <component name="RunManager" selected="Python.hw08_part2">
     <configuration name="HW_08 Part 1" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="HW_08_Shanbhag_Sakai_dir" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -88,8 +92,31 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="hw08_part2" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="HW_08_Shanbhag_Sakai_dir" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/hw08_part2.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.hw08_part2" />
         <item itemvalue="Python.HW_08 Part 1" />
         <item itemvalue="Python.HW_08_Part 2" />
       </list>
@@ -106,7 +133,7 @@
       <option name="presentableId" value="Default" />
       <updated>1603394941779</updated>
       <workItem from="1603394951770" duration="5949000" />
-      <workItem from="1603564260144" duration="36915000" />
+      <workItem from="1603564260144" duration="39952000" />
     </task>
     <task id="LOCAL-00001" summary="Changed the codes to take the absolute values and commented the codes as well">
       <created>1603583677294</created>
@@ -129,7 +156,14 @@
       <option name="project" value="LOCAL" />
       <updated>1603656840155</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Implemented Part 2">
+      <created>1603657176054</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1603657176054</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -163,11 +197,17 @@
           <line>27</line>
           <option name="timeStamp" value="4" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/HW_08 Part 1.py</url>
+          <line>135</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/HW_08_Shanbhag_Sakai_dir$hw08_part2.coverage" NAME="hw08_part2 Coverage Results" MODIFIED="1603672602411" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/HW_08_Shanbhag_Sakai_dir$HW_08_Part_2.coverage" NAME="HW_08_Part 2 Coverage Results" MODIFIED="1603656007747" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/HW_08_Shanbhag_Sakai_dir$HW_08_Part_1.coverage" NAME="HW_08 Part 1 Coverage Results" MODIFIED="1603656470450" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/HW_08_Shanbhag_Sakai_dir$HW_08_Part_1.coverage" NAME="HW_08 Part 1 Coverage Results" MODIFIED="1603671639530" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

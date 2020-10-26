@@ -121,4 +121,6 @@ def Main():
     GUEST_DISTANCE_MATRIX = generateDistanceMatrix(dataDict_copy, rows)
     startClustering(GUEST_DISTANCE_MATRIX,dataDict_copy)
     print(Dendrogram_list)
-Main()
+
+if __name__ == '__main__':
+    Main()

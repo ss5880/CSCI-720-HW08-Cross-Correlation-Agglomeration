@@ -17,7 +17,7 @@ def K_Means(data):
     N_CLUSTERS = data.shape[0]
     NUM_MERGED_CLUSTERS = 1
 
-    while(N_CLUSTERS != STOPPING_CRITERIA ):
+    while(N_CLUSTERS >= STOPPING_CRITERIA ):
         MIN_DISTANCE = math.inf
         MIN_DISTANCE_CLUSTER_1 = None
         MIN_DISTANCE_CLUSTER_2 = None
